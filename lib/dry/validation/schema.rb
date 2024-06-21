@@ -65,7 +65,7 @@ module Dry
       end
 
       def with(new_options)
-        self.class.new(self.class.rules, options.merge(new_options))
+        self.class.new(self.class.rules, **options.merge(new_options))
       end
 
       def call(input)
